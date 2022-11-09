@@ -1,6 +1,7 @@
 # BreedSimulatorInDetails
 
-##Disclaimer
+## Disclaimer
+
 Sur ce projet réalisé sous angular, les fichiers Calc.ts et Constant.ts ont été inspiré du code réalisé par le créateur de www.walken.co . Le but de ce projet n'étant pas de redéfinir les méthodes de calcul mais plutôt de simplement modifier la manière dont les probabilités sont montrées. Le reste à été réalisé de A à Z.
 Bonne lecture.
 
