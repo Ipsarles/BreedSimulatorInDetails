@@ -1,0 +1,19 @@
+<br>
+<label><b>Autre couleur ?</b> </label> &nbsp;
+<select (change)="updateTheme($event)">
+  <option *ngFor="let i of palettes">{{ i }}</option>
+</select>
+<div class="chartContainer">
+  <div class="element" *ngFor="let chart of global">
+    <div class="test">
+      <apx-chart
+        [series]="chart.stats"
+        [chart]="chart.details"
+        [labels]="chart.labels"
+        [title]="chart.title"
+        [theme]="chart.theme"
+      ></apx-chart>
+    </div>
+    <!-- <p>{{ traits | json }}</p> -->
+  </div>
+</div>

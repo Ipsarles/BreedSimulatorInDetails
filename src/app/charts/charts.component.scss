@@ -1,0 +1,29 @@
+label{
+  background-color: #ecbd90;
+  border-radius: 0.5rem;
+}
+.chartContainer {
+  //   width: 300px;
+  //   height: 400px;
+  // background-color: black;
+  display: grid;
+  gap: 15rem;
+  grid-auto-flow: row;
+  text-align: center;
+
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 0.8fr 0.8fr 0.8fr;
+  grid-template-areas:
+    "L E E"
+    "O O H"
+    "  O  ";
+
+  .element {
+    height: 0.2rem;
+    .test {
+      // background-color: #293542;
+      background-color: #ecbd90;
+      border-radius: 1rem;
+    }
+  }
+}

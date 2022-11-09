@@ -1,0 +1,39 @@
+<div class="col">
+  <div class="IDsearch">
+    <p>Mother Cat : <input [(ngModel)]="ID1" (input)="onKey1($event)" /></p>
+    <div class="desc" *ngIf="cat1 && cat1.level != 0">
+      <a href="https://walken.io/cathlete/{{ ID1 }}">
+        <input type="submit" value="Details" />
+      </a>
+    </div>
+  </div>
+  <div class="IDsearch">
+    <p>
+      Father Cat :
+      <input [(ngModel)]="ID2" (input)="onKey2($event)" />
+    </p>
+    <div class="desc" *ngIf="cat2 && cat2.level != 0">
+      <a href="https://walken.io/cathlete/{{ ID2 }}">
+        <input type="submit" value="Details" />
+      </a>
+    </div>
+  </div>
+  <!-- <input (keyup)="onKey2($event)" /> -->
+  <!-- <button (click)="research(ID2, 2)"></button> -->
+
+  <!-- <h2 *ngIf="cat2">{{ cat2 |json}}</h2>  -->
+  <br>
+  <div class="calc">
+    <p *ngIf="cat1 && cat2">
+      <button (click)="doCalc(cat1, cat2)">Simulate !</button>
+      This operation will take some time (~20s)
+    </p>
+    <div *ngIf="next && cat1.level != 0">
+      <button (click)="reset()" *ngIf="next">Reset</button>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="next && cat1.level != 0">
+  <app-charts [traits]="traits"></app-charts>
+</div>
